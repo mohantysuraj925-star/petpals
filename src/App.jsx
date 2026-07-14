@@ -1,6 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
@@ -9,25 +10,25 @@ import Contact from "./pages/Contact";
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
+      <div className="bg-white overflow-x-hidden">
 
-      <section id="home">
-        <Home />
-      </section>
+        <Navbar />
 
-      <section id="about">
-        <About />
-      </section>
+        <main>
 
-      <section id="services">
-        <Services />
-      </section>
+          <Home />
 
-      <section id="contact">
-        <Contact />
-      </section>
+          <About />
 
-      <Footer />
+          <Services />
+
+          <Contact />
+
+        </main>
+
+        <Footer />
+
+      </div>
     </BrowserRouter>
   );
 }

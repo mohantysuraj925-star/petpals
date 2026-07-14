@@ -1,81 +1,281 @@
 import { motion } from "framer-motion";
-import { TreePine, Droplets, Globe } from "lucide-react";
+import {
+  FaTree,
+  FaTint,
+  FaRecycle,
+  FaGlobeAsia
+} from "react-icons/fa";
+
 
 const missions = [
   {
-    icon: <TreePine className="text-green-600" size={45} />,
-    title: "Tree Plantation",
+    icon: <FaTree />,
+    title: "Plant Trees",
     description:
-      "Planting more trees helps reduce pollution, improve air quality and create a greener environment.",
+      "Plant more trees to create cleaner air and a healthier environment."
   },
   {
-    icon: <Droplets className="text-blue-600" size={45} />,
+    icon: <FaTint />,
     title: "Save Water",
     description:
-      "Conserving water today helps protect natural resources and supports future generations.",
+      "Protect water resources because every single drop matters."
   },
   {
-    icon: <Globe className="text-green-700" size={45} />,
+    icon: <FaRecycle />,
+    title: "Reduce Pollution",
+    description:
+      "Recycle waste, reduce plastic and keep our planet clean."
+  },
+  {
+    icon: <FaGlobeAsia />,
     title: "Protect Earth",
     description:
-      "Together we can reduce pollution and make our planet cleaner, healthier and sustainable.",
-  },
+      "Work together to build a sustainable future for everyone."
+  }
 ];
 
+
 export default function Services() {
+
+
   return (
+
     <section
       id="services"
-      className="min-h-screen bg-gray-50 px-6 py-24 flex items-center"
+      className="bg-green-50 pt-28 pb-32 px-6"
     >
-      <div className="max-w-7xl mx-auto w-full">
+
+      <div className="max-w-7xl mx-auto">
+
+
 
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+
+          initial={{
+            opacity:0,
+            y:40
+          }}
+
+          whileInView={{
+            opacity:1,
+            y:0
+          }}
+
+          viewport={{
+            once:true
+          }}
+
+          transition={{
+            duration:0.7
+          }}
+
           className="text-center"
+
         >
-          <h2 className="text-5xl font-bold text-green-700">
+
+
+          <span className="inline-block bg-white text-green-700 px-5 py-2 rounded-full font-semibold shadow-sm">
+
             Our Mission
+
+          </span>
+
+
+
+          <h2 className="mt-6 text-5xl font-extrabold text-gray-900">
+
+            Together We Can Make A Difference
+
           </h2>
 
-          <p className="mt-5 text-lg text-gray-600 max-w-3xl mx-auto">
-            Our mission is to protect nature by planting trees, saving water
-            and creating awareness for a greener tomorrow.
+
+
+          <p className="mt-6 text-lg text-gray-600 max-w-3xl mx-auto leading-8">
+
+            Small actions create big changes. Join our mission
+            to protect nature and make Earth greener.
+
           </p>
+
+
         </motion.div>
 
 
-        <div className="grid md:grid-cols-3 gap-8 mt-16">
 
-          {missions.map((mission, index) => (
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">          {missions.map((item,index)=>(
+
             <motion.div
+
               key={index}
-              whileHover={{ y: -10, scale: 1.03 }}
-              transition={{ duration: 0.3 }}
-              className="bg-white rounded-3xl shadow-xl p-8 text-center"
+
+              initial={{
+                opacity:0,
+                y:40
+              }}
+
+              whileInView={{
+                opacity:1,
+                y:0
+              }}
+
+              viewport={{
+                once:true
+              }}
+
+              transition={{
+                delay:index*0.15
+              }}
+
+              whileHover={{
+                y:-10,
+                scale:1.03
+              }}
+
+              className="bg-white rounded-3xl p-8 shadow-xl text-center"
+
             >
 
+
               <div className="flex justify-center">
-                {mission.icon}
+
+
+                <div className="bg-green-100 p-5 rounded-full">
+
+                  <span className="text-5xl text-green-600">
+
+                    {item.icon}
+
+                  </span>
+
+                </div>
+
+
               </div>
 
-              <h3 className="text-2xl font-bold mt-6">
-                {mission.title}
+
+
+              <h3 className="mt-6 text-2xl font-bold text-gray-900">
+
+                {item.title}
+
               </h3>
 
+
+
               <p className="mt-4 text-gray-600 leading-7">
-                {mission.description}
+
+                {item.description}
+
               </p>
 
+
+
             </motion.div>
+
+
           ))}
+
 
         </div>
 
+
+
+
+
+        <motion.div
+
+          initial={{
+            opacity:0,
+            y:40
+          }}
+
+          whileInView={{
+            opacity:1,
+            y:0
+          }}
+
+          viewport={{
+            once:true
+          }}
+
+          className="mt-20 bg-white rounded-3xl shadow-xl p-10"
+
+        >
+
+
+          <div className="flex justify-between items-center mb-4">
+
+
+            <h3 className="text-xl font-bold text-gray-800">
+
+              Green Mission Progress
+
+            </h3>
+
+
+            <span className="text-green-700 font-bold text-xl">
+
+              75%
+
+            </span>
+
+
+          </div>
+
+
+
+
+          <div className="w-full h-5 bg-gray-200 rounded-full overflow-hidden">
+
+
+            <motion.div
+
+              initial={{
+                width:0
+              }}
+
+              whileInView={{
+                width:"75%"
+              }}
+
+              viewport={{
+                once:true
+              }}
+
+              transition={{
+                duration:1.5
+              }}
+
+              className="h-full bg-green-600 rounded-full"
+
+            />
+
+
+          </div>
+
+
+
+
+          <p className="mt-6 text-center text-gray-600 leading-7">
+
+            Our goal is to inspire millions of people to plant trees,
+            save water and protect nature.
+
+          </p>
+
+
+
+        </motion.div>
+
+
+
       </div>
+
+
     </section>
+
+
   );
+
 }
