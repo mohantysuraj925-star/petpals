@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import { Link as ScrollLink } from "react-scroll";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import {
   Leaf,
   Trees,
@@ -125,7 +124,7 @@ export default function Home() {
           <div className="mt-10 flex flex-wrap gap-4">
 
 
-            <ScrollLink
+            <Link
               to="services"
               smooth={true}
               duration={700}
@@ -139,12 +138,15 @@ export default function Home() {
               </button>
 
 
-            </ScrollLink>
+            </Link>
 
 
 
             <Link
-              to="/learn-more"
+              to="about"
+              smooth={true}
+              duration={700}
+              offset={-90}
             >
 
               <button className="px-8 py-4 rounded-full border-2 border-green-600 text-green-700 font-semibold hover:bg-green-600 hover:text-white transition-all">

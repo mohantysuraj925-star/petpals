@@ -160,7 +160,7 @@ export default function Footer() {
 
 
             <p>
-              📱 9337988950
+              📱 99999999
             </p>
 
 

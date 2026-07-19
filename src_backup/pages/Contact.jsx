@@ -30,7 +30,7 @@ export default function Contact() {
     {
       icon: <Phone size={30}/>,
       title: "Phone",
-      text: "9337988950"
+      text: "99999999"
     },
     {
       icon: <MapPin size={30}/>,
